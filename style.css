@@ -12,6 +12,10 @@ body:before {
   animation: spin 10000s linear infinite;
 }
 
+body {
+  cursor: url('party boi.png'), auto;
+}
+
 /* Credit to https://codepen.io/jamesbarnett/pen/kfmKa */
 .marquee {
   height: 150px;
