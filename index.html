@@ -1,6 +1,5 @@
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
   <title>connor.FUN</title>
 </head>
 <body>
@@ -10270,10 +10269,13 @@ return jQuery;
   <img src="murica.gif"/>
   <br />
   <img id="always" src="always.gif"/>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <script>
     var array = new Uint32Array(1);
     if (window.crypto.getRandomValues(array)%100 < 30) {
       $( "body" ).append( "<img src='SQUARES.jpg' />" );
     }
+    var d = new Date().getTime()%10000000/10000000*360
+    document.styleSheets[0].insertRule("@keyframes spin {0% {-webkit-transform: rotate(" + d + "deg);transform: rotate(" + d + "deg);}50% {-webkit-transform: rotate(" + (d + 180) + "deg);transform: rotate(" + (d + 180) + "deg);}100% {-webkit-transform: rotate(" + (d + 360) + "deg);transform: rotate(" + (d + 360) + "deg);}}")
   </script>
 </body>
