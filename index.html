@@ -10,6 +10,14 @@
 
   	gtag('config', 'UA-42726363-7');
 	</script>
+
+	<!-- Poor man's https redirect -->
+	<script>
+		if (!(location.hostname === "localhost" || location.hostname === "127.0.0.1") && location.protocol != 'https:')
+		{
+			location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+		}
+	</script>
 </head>
 <body>
   <script>
